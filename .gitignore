@@ -1,3 +1,4 @@
-*.[oa]
-~*
-*.gitignore
+/.settings/
+/.buildpath
+/.project
+/.gitignore
