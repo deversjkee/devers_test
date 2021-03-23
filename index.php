@@ -1,0 +1,3 @@
+[!bot?
+	&data=$_POST
+!]
