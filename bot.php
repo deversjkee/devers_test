@@ -30,6 +30,15 @@ $sendData = [
 	'text' => 'Default'
 ];
 
+//shrug
+if($message == 'shrug'){
+	$sendText = '¯\_(ツ)_/¯';
+	
+	$sendData['text'] = $sendText;
+	
+	Send($url, $sendData);
+};
+
 
 //Поздороваемся в ответ
 if ($message == 'Привет' || $message == 'привет'){
@@ -44,7 +53,7 @@ if ($message == 'Привет' || $message == 'привет'){
 function Send($url, $sendData){
 	
 	global $modx;
-	$modx->runSnippet('ddMakeHttpRequest', array(
+	$result = $modx->runSnippet('ddMakeHttpRequest', array(
 			'url' => $url,
 			'method' => 'post',
 			'postData' => json_encode($sendData),
